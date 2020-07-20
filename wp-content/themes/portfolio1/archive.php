@@ -1,5 +1,5 @@
 <?php get_header();?>
 
-    last default load
+    for categories
 
 <?php get_footer();?>

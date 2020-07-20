@@ -1,5 +1,5 @@
 <?php get_header();?>
 
-    last default load
+    unrecognized 404
 
 <?php get_footer();?>

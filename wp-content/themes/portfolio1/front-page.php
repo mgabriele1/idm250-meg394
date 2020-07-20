@@ -1,5 +1,5 @@
 <?php get_header();?>
 
-    last default load
+    Front Page
 
 <?php get_footer();?>

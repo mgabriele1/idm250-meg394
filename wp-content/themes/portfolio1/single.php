@@ -1,5 +1,5 @@
 <?php get_header();?>
 
-    last default load
+    for posts
 
 <?php get_footer();?>

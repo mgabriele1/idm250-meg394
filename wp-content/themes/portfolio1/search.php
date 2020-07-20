@@ -1,5 +1,5 @@
 <?php get_header();?>
 
-    last default load
+    search page
 
 <?php get_footer();?>

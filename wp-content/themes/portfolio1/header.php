@@ -8,16 +8,11 @@
 </head>
 <body <?php body_class(); ?>>
 <header>
-    <div class="mglogo">
-        <i class="icon-mglogo"></i>
-        <h1 class="mg-text">MG Design</h1>
-    </div>
-    <div class="pages">
-        <h2>Projects</h2>
-        <h2>Art</h2>
-        <h2>Contact</h2>
-        <div class="icon-search"></div>
-    <div>
+    <?php wp_nav_menu([
+        'theme_location' => 'primary_menu',
+        'container' => false,
+        'items_wrap' => '<nav class="mgmenu">%3$s</nav>',
+    ]);?>
 </header>
 
-<?php wp_nav_menu(['theme_location' => 'primary_menu']);?>
+

@@ -8,6 +8,7 @@
 body {
     width: 100vw;
     height: 100vh;
+    background-color: var(--back);
 }
 
 /* Color Variables */
@@ -24,12 +25,6 @@ body {
     --dark_secondary: #BEBEBE;
 }
 
-/* Images */
-
-img {
-    width: 100%;
-    height: auto;
-}
 /* ----- SVG ICONS ------ */
 /* icons font */
 @font-face {
@@ -43,7 +38,7 @@ img {
     font-style: normal;
 }
 [class*='icon-']:before{
-	display: inline-block;
+    display: inline-block;
    font-family: 'mglogos';
    font-style: normal;
    font-weight: normal;
@@ -55,26 +50,16 @@ img {
 .icon-mglogo:before{content:'\0042';}
 .icon-search:before{content:'\0043';}
 
-/* mg logo styling */
-.icon-mglogo {
-    font-size: 5rem;
-    color: var(--purple);
-    z-index: 0;
+/* Images */
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 /* ----- HEADINGS ----- */
-/* mg logo */
-h1 {
-    font-family: "Andale Mono"; 
-    font-size: 1.875rem; /* 30px */
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 700;
-    color: var(--main);
-    text-transform: uppercase;
-}
 /* nav */
-h2 {
+.mgmenu {
     font-family: "Andale Mono"; 
     font-size: 1.25rem; /* 20px */ 
     font-style: normal; 
@@ -83,126 +68,150 @@ h2 {
     color: var(--main);
     text-transform: lowercase;
 }
+/* mg logo text */
+.icon-mglogo a {
+    font-family: "Andale Mono"; 
+    font-size: 1.875rem; /* 30px */
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700;
+    color: var(--main);
+    text-transform: uppercase;
+}
+/* mg logo styling */
+.icon-mglogo {
+    font-size: 5rem;
+    color: var(--purple);
+    z-index: 0;
+    text-transform: uppercase;
+}
+/* search styling */
+.icon-search {
+    text-transform: uppercase;
+}
+/* links */
+a {
+    text-decoration: none;
+    color: var(--main);
+}
+/* list */
+li {
+    list-style: none;
+}
 
 /* ------ HEADER ----- */
-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    width: 100vw;
-    padding: 0 0 0 1rem;
-}
-.mglogo {
-    display: flex;
-    align-items: center;
-    justify-self: flex-start;
-}
-.mg-text {
-    z-index: 1;
-    margin: -.5rem 0 0 -1rem;
-}
-.pages {
+.mgmenu {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     align-items: center;
-    margin-right: -5rem;
+    justify-content: space-between;
+    padding: 0 2rem 0 1rem;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.icon-mglogo {
+    padding-right: 20rem;
+}
+#menu-item-17 {
+    display: flex;
+}
+.icon-mglogo a{
+    margin-left: -1rem;
+    align-self: center;
+    margin-top: 1rem;
 }
 
-.pages > * {
-    margin-left: 8rem;
-    margin-top: -.5rem;
-}
+/* ACTIVE MENU STATE */
+/* .current-menu-item {
 
+} */
 
 /* ----- MEDIA QUERIES ----- */
 @media screen and (max-width: 1200px) {
-    .pages > * {
-        margin-left: 5rem;
-    }
-    .pages {
-        margin-right: -2rem;
+    .icon-mglogo {
+        padding-right: 15rem;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    .pages > * {
-        margin-left: 3rem;
+    .icon-mglogo {
+        padding-right: 10rem;
     }
-    .pages {
-        margin-right: 0;
-    }
-    h1 {
-        font-size: 1.5625rem; /* 25px */
-    }
-    h2 {
+    .mgmenu {
         font-size: 1.125rem; /* 18px */
+    }
+    .icon-mglogo a{
+        font-size: 1.5625rem; /* 25px */
     }
     .icon-mglogo {
         font-size: 4rem;
     }
 }
 
-@media screen and (max-width: 750px) {
-    .pages > * {
-        margin-left: 2rem;
+@media screen and (max-width: 800px) {
+    .icon-mglogo {
+        padding-right: 5rem;
     }
-    h1 {
+    .icon-mglogo a {
         font-size: 1.375rem; /* 22px */
     }
 }
 
 @media screen and (max-width: 600px) {
-    .pages > * {
-        margin-left: 1.5rem;
+    .icon-mglogo {
+        padding-right: 2.5rem;
     }
-    h1 {
-        font-size: 1.25rem; /* 20px */
-    }
-    h2 {
+    .mgmenu {
         font-size: 1rem; /* 16px */
+    }
+    .icon-mglogo a  {
+        font-size: 1.25rem; /* 20px */
     }
     .icon-mglogo {
         font-size: 3.5rem;
     }
-    .mg-text, .pages > * {
-        margin-top: 0;
-    }
 }
 
 @media screen and (max-width: 515px) {
-    .pages {
+    .mgmenu {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr 1fr;
         justify-items: flex-end;
         align-items: center;
-        padding-top: 2rem;
+        padding: 0 1.5rem 0 .75rem;
     }
-    .pages > * {
-        margin: 0;
-        padding-bottom: 1rem;
+    .menu-item {
+        grid-column-start: 2;
+        padding-bottom: .2rem;
     }
     .icon-search {
         grid-row-start: 1;
         grid-row-end: 2;
+        grid-column-start: 2;
+        font-size: 1.25rem;
+        padding-top: 1.7rem;
+        padding-bottom: 0;
     }
-    header {
-        padding: 0 1rem;
+    .icon-mglogo {
+        padding-right: 0;
+        grid-column-start: 1;
+        justify-self: flex-start;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        align-self: flex-start;
     }
     .mglogo {
         align-items: flex-start;
-    }
-    .mg-text {
-        margin-top: 1.5rem;
     }
     .icon-mglogo {
         font-size: 4rem;
     }
 }
 
-@media screen and (max-width: 350px) {
-    header {
+@media screen and (max-width: 375px) {
+    .mgmenu {
         grid-template-columns: 1.5fr 1fr;
+        padding: 0 .75rem 0 .25rem;
     }
 }

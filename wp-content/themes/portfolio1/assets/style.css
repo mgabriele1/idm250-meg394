@@ -213,8 +213,7 @@ a {
     flex-direction: column;
     width: 100vw;
     height: auto;
-    padding: 1rem 0 0 1rem;
-    max-width: 1330px;
+    padding: 1rem;
     margin: 0 auto;
 } 
 .art-title {
@@ -228,26 +227,7 @@ a {
     margin: 1rem 0;
 }
 .art-image-wrapper {
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: 1fr;
     width: 100%;
-}
-.art-image {
-    border: 6px solid var(--purple);
-    width: 100%;
-    height: auto;
-    max-width: 700px;
-}
-.art-image img {
-    max-width: 680px;
-    height: auto;
-}
-.line {
-    background-color: var(--purple);
-    width: 100%;
-    height: 2rem;
-    margin-top: 2rem;
 }
 .art-description {
     font-family: "Andale Mono"; 
@@ -257,11 +237,43 @@ a {
     font-weight: 400;
     color: var(--main);
     text-transform: lowercase;
-    padding: 1rem 4rem 1rem 0;
-    line-height: 1.875rem; /* 30px */
+    padding: 1rem 2.5rem 1rem 0;
+    line-height: 1.5rem;
 }
 
 /* media queries */
+/* small screen styling */
+@media screen and (min-width: 450px) {
+    .art-wrapper {
+        padding: .75rem 0 .75rem 1rem;
+    } 
+    .art-image-wrapper {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 1fr;
+    }
+    .art-image {
+        background-color: var(--purple);
+    }
+    .art-image img {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        padding: .45rem .45rem .3rem;
+    }
+    .line {
+        background-color: var(--purple);
+        width: 100%;
+        height: 2rem;
+        margin-top: 2rem;
+    }
+    .art-description {
+        padding: 1rem 4rem 1rem 0;
+        line-height: 1.875rem; /* 30px */
+    }
+}
+
+/* medium - large screen styling */
 @media screen and (min-width: 475px) {
     .art-title {
         font-size: 1.5625rem; /* 25px*/
@@ -332,13 +344,15 @@ a {
     }
 }
 
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1300px) {
     .art-wrapper {
         grid-template-columns: 25% 75%;
         padding: 1rem 0 0;
+        margin-left: 4vw;
+        margin-top: 4vh;
     }
     .art-image-wrapper {
-        grid-template-columns: 70% 30%;
+        grid-template-columns: 65% 35%;
     }
 }
 

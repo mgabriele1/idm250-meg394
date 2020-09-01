@@ -182,30 +182,21 @@ a {
         padding: 0 1.5rem 0 .75rem;
     }
     .menu-item {
-        grid-column-start: 3;
-        padding-bottom: .2rem;
-    }
-    .icon-search {
-        grid-row-start: 1;
-        grid-row-end: 2;
         grid-column-start: 2;
-        font-size: 1.25rem;
-        padding-top: 1.7rem;
-        padding-bottom: 0;
+        padding-bottom: .2rem;
     }
     .icon-mglogo {
         padding-right: 0;
         grid-column-start: 1;
         justify-self: flex-start;
-        grid-row-start: 1;
-        grid-row-end: 3;
         align-self: flex-start;
-    }
-    .mglogo {
-        align-items: flex-start;
-    }
-    .icon-mglogo {
         font-size: 4rem;
+    }
+    .mgmenu li:last-of-type {
+        grid-row-start: 1;
+        font-size: 1.25rem;
+        padding-top: 1.7rem;
+        padding-bottom: 0;
     }
 }
 

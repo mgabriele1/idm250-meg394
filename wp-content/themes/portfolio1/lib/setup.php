@@ -42,4 +42,11 @@ add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'add_post_thumbnails_support');
 
+// custom art post image max
+
+add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+function wpdocs_theme_setup() {
+    add_image_size( 'thumbnail_size_h', 850 ); // 420 pixels high (and unlimited width)
+}
+
 ?>

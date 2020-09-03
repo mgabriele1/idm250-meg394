@@ -8,7 +8,7 @@
     </div>
     <div class="art-image-wrapper">
         <div class="art-image">
-              <?php the_post_thumbnail(); ?>
+              <?php the_post_thumbnail('thumbnail_size_h'); ?>
         </div>
         <div class="line"></div>
     </div>

@@ -210,27 +210,45 @@ a {
 /* ----- HOME PAGE ----- */
 .post-left {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: min-content auto;
     grid-template-rows: auto auto;
     align-self: flex-start;
 }
-.post-left h2 {
-    grid-column-start: 1;
-    grid-column-end: 3;
+.left-art {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto auto;
+    align-self: flex-start;
 }
+.post-left img, .post-right img {
+    object-fit: cover;
+    transform: scale(2) translate(-5%, -5%);
+}
+.post-img {
+    width: 20vh;
+    height: 20vh;
+    overflow: hidden;
+}
+.post-art-img {
+    height: 20vh;
+    overflow: hidden;
+}
+
 .post-left p {
     padding-left: 1rem;
     grid-column-start: 2;
 }
 .post-right {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: auto min-content;
     grid-template-rows: auto auto;
     align-self: flex-end;
 }
-.post-right h2 {
-    grid-column-start: 2;
-    grid-column-end: 3;
+.right-art {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto;
+    align-self: flex-end;
 }
 .post-right img {
     grid-column-start: 2;
@@ -239,6 +257,7 @@ a {
 .post-right p {
     padding-right: 1rem;
     grid-column-start: 1;
+    grid-column-end: 2;
 }
 .recent-posts {
     display: flex;
@@ -246,7 +265,6 @@ a {
     padding: 1rem;
 }
 .recent-posts img{
-    max-width: 400px;
     height: auto;
     grid-row-start: 2;
 }
@@ -258,6 +276,9 @@ a {
     font-weight: 400;
     color: var(--main);
     text-transform: uppercase;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-bottom: .5rem;
 }
 .recent-posts a {
     padding: 1rem 0;
@@ -272,10 +293,97 @@ a {
     text-transform: lowercase;
     line-height: 1.5rem;
     grid-row-start: 2;
+    visibility: hidden;
+    max-height: 20vh;
+}
+.post-right h2 {
+    justify-self: flex-end;
+}
+.recent-title {
+    width: 100%;
+    height: auto;
+    display: flex;
+    text-align: right;
+}
+.recent-title h1{
+    font-family: "Andale Mono"; 
+    font-size: 1.25rem; /* 20px */ 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700;
+    color: var(--main);
+    text-transform: lowercase;
+    padding: 2rem 0 0;
+    border-bottom: 8px solid var(--purple);
+    width: 20%;
+}
+/* MEDIA QUERIES */
+@media screen and (min-width: 400px) {
+    .recent-posts p {
+        visibility: visible;
+        max-height: none;
+    }
+    .recent-posts > * {
+        max-width: 475px;
+    }
 }
 
-/* MEDIA QUERIES */
-
+@media screen and (min-width: 600px) {
+    .post-img {
+        width: 25vh;
+        height: 20vh;
+    }
+    .recent-posts {
+        padding: 2rem;
+    }
+}
+@media screen and (min-width: 750px) {
+    .recent-posts > * {
+        max-width: 700px;
+    }
+    .post-img {
+        width: 30vh;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .recent-posts > * {
+        max-width: 1000px;
+    }
+    .post-img, .post-art-img {
+        height: 30vh;
+    }
+    .post-img {
+        width: 35vh;
+    }
+    .recent-posts {
+        padding: 3rem;
+    }
+    .post-left img, .post-right img {
+        transform: scale(2.2) translate(-1%, -8%);
+    }
+    .left-art {
+        width: 1000px;
+    }
+    .recent-posts p {
+        max-width: 500px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .post-img {
+        width: 45vh;
+    }
+    .recent-posts > * {
+        max-width: 1200px;
+    }
+    .recent-posts {
+        padding: 4rem;
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+    .left-art {
+        width: 1200px;
+    }
+}
 
 /* ----- ART PAGE ----- */
 .art-wrapper {
@@ -580,6 +688,11 @@ a {
 
 
 /* HOME ANIMATION */
+.home-top {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
   #showcase {
     display: flex;
     justify-content: center;
@@ -850,14 +963,34 @@ a {
   }
   @media (max-width: 1000px) {
     #showcase {
-      position: absolute;
-      top: -115px;
-      left: -200px;
-      margin: 0;
-      -moz-transform: scale(0.65, 0.65);
-      -ms-transform: scale(0.65, 0.65);
-      -webkit-transform: scale(0.65, 0.65);
-      transform: scale(0.65, 0.65);
+      width: 800px;
+      height: 500px;
+    }
+  }
+  @media (max-width: 800px) {
+    #showcase {
+      width: 600px;
+      height: 300px;
+    }
+  }
+  @media (max-width: 600px) {
+    #showcase {
+        width: 450px;
+        height: 300px;
+      }
+  }
+  @media (max-width: 450px) {
+    .home-top {
+        height: 350px;
+        width: 200px;
+    }
+    #showcase {
+      width: 370px;
+      height: 250px;
+      transform: translate(-30px, 50px) rotate(90deg);
+    }
+    section img {
+        transform: rotate(-90deg);
     }
   }
 /* END */  

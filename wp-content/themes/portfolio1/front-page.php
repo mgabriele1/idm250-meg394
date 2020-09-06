@@ -23,8 +23,9 @@
 </div>
 <div class="recent-title">
     <h1>
-        Recent Work
+        Recent Work 
     </h1>
+    <i class="icon-arrow"></i>  
 </div>
 <div class="recent-posts">
     <?php 

@@ -11,13 +11,14 @@
 
         <form action="/" method="get">
             <input type="text" name="s" id="searchField" value="<?php the_search_query();?>" placeholder=" search...">
-            <button input="submit">
+            <button input="submit" name="submit">
                 <?php echo $icon ?>
             </button>
         </form>
 
     </div>
 
+    <?php if (isset( $_GET['submit'])) { ?>
 
     <div class="recent-posts" id="search-posts">
 
@@ -55,6 +56,7 @@
         <p>no results</p>
 
     <?php endif; ?>
+    <?php  } ?>
 
     </div>
 

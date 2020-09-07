@@ -1,3 +1,4 @@
+
 // menu styling
 let menuOne = document.getElementById("menu-item-18");
 let menuTwo = document.getElementById("menu-item-19");
@@ -14,13 +15,15 @@ document.getElementById("navTrigger").addEventListener("click", function() {
         menuFour.style.visibility = "hidden";
         menuBack.style.height = "4.5rem";
         menuBack.style.boxShadow = "none"
+        menuBack.style.visibility = "hidden";
     } else {
         menuOne.style.visibility = "visible";
         menuTwo.style.visibility = "visible";
         menuThree.style.visibility = "visible";
         menuFour.style.visibility = "visible";
         menuBack.style.height = "19rem";
-        menuBack.style.boxShadow = "-5px 5px 15px rgba(189, 189, 189, 0.397"
+        menuBack.style.boxShadow = "-5px 5px 15px rgba(189, 189, 189, 0.397)"
+        menuBack.style.visibility = "visible";
     }
 }, false);
 

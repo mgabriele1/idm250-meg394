@@ -149,6 +149,7 @@ header {
 }
 #drop-back {
   width: 35%;
+  visibility: hidden;
 }
 
 /* ACTIVE MENU STATE */
@@ -259,6 +260,21 @@ header {
         grid-template-columns: 1.5fr 1fr;
         padding: 0 .75rem 0 .25rem;
     }
+}
+
+@media screen and (min-width: 1000px) {
+  .mgmenu {
+      height: 5.5rem;
+  }
+  #menu-item-18 a,  #menu-item-19 a,  #menu-item-20 a,  #menu-item-225 a {
+    padding-top: 1.3rem;
+    margin-top: -1rem;
+  }
+  .icon-mglogo a{
+    margin-left: -1rem;
+    align-self: center;
+    padding-top: 1.6rem;
+  }
 }
 
 /* ----- HOME PAGE ----- */
@@ -376,6 +392,7 @@ header {
   font-size: 1.5rem;
   padding-top: .75rem;
 }
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 400px) {
     .recent-posts p {
@@ -1107,6 +1124,7 @@ header {
       transform: translate(-30px, 50px) rotate(90deg);
     }
   }
+
 /* END HOME ANIMATION */  
 
 /* HAMBURGER MENU */
@@ -1374,6 +1392,7 @@ header {
    color: #fff;
    transform: scale(0.05);
    transition: all 0.2s ease;
+   visibility: hidden;
 }
  
 .card p {
@@ -1426,6 +1445,7 @@ header {
    
 }
 .cardhover .fa-arrow-right {
+   visibility: visible;
    transform: scale(0.1);
    right: -2.25rem;
 }
@@ -1751,6 +1771,7 @@ div .pbSubmit {
   width: 100%;
   position: fixed;
   z-index: 1;
+  margin-top: .5rem;
 }
 
 .search-wrapper input {
@@ -1791,7 +1812,7 @@ div .pbSubmit {
 
 .search-active {
     width: 70px;
-    height: 80px;
+    height: 5.5rem;
     background-color: var(--purple);
     z-index: 2;
     position: fixed;
@@ -1824,3 +1845,162 @@ div .pbSubmit {
     font-size: .9375rem; /* 15px */
   }
 }
+
+/* 404 */
+.error-message {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-message p{
+  font-family: "Andale Mono"; 
+  font-size: .875rem; /* 14px */
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 400;
+  color: var(--main);
+  text-transform: uppercase;
+}
+
+.top-purple {
+  background-color: var(--purple);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  margin-left: 55%;
+  width: 3rem;
+  height: 0px;
+  animation-name: top-purple;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes top-purple {
+  from {height: 0px;}
+  to {height: 45%;}
+}
+
+.left-purple {
+  background-color: var(--purple);
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  width: 5rem;
+  height: 0px;
+  animation-name: left-purple;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes left-purple {
+  from {height: 0px;}
+  to {height: 45%;}
+}
+
+.left-purple-two {
+  background-color: var(--purple);
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  margin-top: 55vh;
+  width: 0px;
+  height: 2rem;
+  animation-name: left-purple-two;
+  animation-duration: 2s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes left-purple-two {
+  from {width: 0px;}
+  to {width: 50%;}
+}
+
+.right-purple {
+  background-color: var(--purple);
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  margin-top: 65vh;
+  width: 0px;
+  height: 4rem;
+  animation-name: right-purple;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes right-purple {
+  from {width: 0px;}
+  to {width: 35%;}
+}
+
+@media screen and (min-width: 515px) {
+  .error-message p{
+    font-size: 1rem; /* 16px */
+  }
+  .top-purple {
+    z-index: 4;
+    margin-left: 33%;
+  }
+  @keyframes right-purple {
+    from {width: 0px;}
+    to {width: 40%;}
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .error-message p{
+    font-size: 1.25rem; /* 20px */
+  }
+  .top-purple {
+    width: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .top-purple {
+    margin-left: 28%;
+  }
+
+  @keyframes top-purple {
+    from {height: 0px;}
+    to {height: 40%;}
+  }
+
+  .right-purple {
+    margin-top: 70vh;
+    height: 5rem;
+  }
+  
+  @keyframes right-purple {
+    from {width: 0px;}
+    to {width: 40%;}
+  }
+}
+
+@media screen and (min-width: 975px) {
+  .top-purple {
+    margin-left: 38%;
+  }
+
+  @keyframes left-purple {
+    from {height: 0px;}
+    to {height: 40%;}
+  }
+  
+  .left-purple-two {
+    margin-top: 60vh;
+  }
+  
+  @keyframes left-purple-two {
+    from {width: 0px;}
+    to {width: 35%;}
+  }
+}
+

@@ -14,9 +14,7 @@ $args = [
     'posts_per_page' => 50,
     'orderby' => 'date'
 ];
-$the_query = new WP_Query($args); 
-
-$post_count = 1;?>
+$the_query = new WP_Query($args); ?>
 
 <?php if ($the_query->have_posts()) : ?>
     <?php while($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -29,8 +27,7 @@ $post_count = 1;?>
         <button>
         </button>
     </a>
-
-<?php $post_count++; ?>   
+  
 <?php endwhile; ?>
 <?php else : ?>
     <p> no content </p>

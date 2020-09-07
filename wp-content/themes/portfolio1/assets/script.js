@@ -31,6 +31,35 @@ if (mgMenu.classList.contains("current-menu-item") == true) {
     mgLogo.style.marginTop = "-1rem";
 }
 
+// search mage menu 
+if (menuFour.classList.contains("current-menu-item") == true) {
+    let backColor = document.getElementById("back-color");
+    var theMenu = document.getElementById("mgmenu");
+    let searchActive = document.getElementById("search-active");
+    let backMenu = document.getElementById("menu-back");
+
+    if (document.body.clientWidth > 515) {
+
+        if (menuFour.classList.contains("current-menu-item") == true) {
+            searchActive.style.display = "initial";
+            backMenu.style.display = "inline-block";
+            theMenu.style.backgroundColor = "unset";
+            backColor.style.display = "none";
+        } else {
+            searchActive.style.display = "none";
+            backMenu.style.display = "none";
+            theMenu.style.backgroundColor = "var(--back)";
+            backColor.style.display = "initial";
+        }
+    }
+    if (menuFour.classList.contains("current-menu-item") == true) {
+        backColor.style.height = "5rem";
+    } else {
+        backColor.style.height = "4.5rem";
+    }
+}
+
+
 // projects microinteraction 
 var sPath = window.location.pathname;
 var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
@@ -57,6 +86,3 @@ if (sPage == 'projects') {
         whichCard.classList.remove("cardhover");
     }
 }
-
-
-

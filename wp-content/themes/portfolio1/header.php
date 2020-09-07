@@ -14,7 +14,7 @@
         <?php wp_nav_menu([
             'theme_location' => 'primary_menu',
             'container' => false,
-            'items_wrap' => '<nav class="mgmenu">%3$s</nav>',
+            'items_wrap' => '<nav class="mgmenu" id="mgmenu">%3$s</nav>',
         ]);?>
         <div class="navTrigger" id="navTrigger">
             <i></i><i></i><i></i>

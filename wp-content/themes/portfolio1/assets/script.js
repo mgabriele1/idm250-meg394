@@ -89,3 +89,18 @@ if (sPage == 'projects') {
         whichCard.classList.remove("cardhover");
     }
 }
+
+// art image landscape vs portrait 
+if (window.location.href.includes('art/')) {
+    artImg = document.getElementById("the-art-image");
+    artWidth = artImg.clientWidth;
+    artHeight = artImg.clientHeight;
+
+    if (artHeight > artWidth) {
+        artImg.style.width = "auto";
+        artImg.style.maxHeight = "70vh";
+    } else {
+        artImg.style.width = "100%";
+        artImg.style.maxHeight = "70vh";
+    }
+}

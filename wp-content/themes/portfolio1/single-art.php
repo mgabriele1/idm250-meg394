@@ -2,6 +2,8 @@
 
   <?php while (have_posts()) : the_post(); ?>
 
+<main class="the-container">
+
 <div class="art-wrapper">
     <div class="art-title">
           <?php the_title(); ?>
@@ -16,6 +18,8 @@
           <?php the_excerpt();?>
     </div>
 </div>
+
+</main>
 
   <?php endwhile; ?>
 

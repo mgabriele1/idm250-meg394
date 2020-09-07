@@ -515,7 +515,6 @@ header {
     height: auto;
     padding: 1rem;
     margin: 0 auto;
-    max-width: 100vw;
 } 
 .art-title {
     font-family: "Andale Mono"; 
@@ -531,12 +530,10 @@ header {
     width: 100%;
     max-width: 100%;
 }
-.art-image {
-    max-height: 70vh;
-}
 .art-image img {
     width: 100%;
     height: auto;
+    object-fit: contain;
 }
 .art-description {
     font-family: "Andale Mono"; 
@@ -581,8 +578,6 @@ header {
     }
     .art-image {
         background-color: var(--purple);
-        max-height: 70vh;
-        width: auto;
     }
     .line {
         background-color: var(--purple);

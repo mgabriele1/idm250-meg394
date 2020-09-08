@@ -9,7 +9,7 @@
 
     <div class="search-input">
 
-        <form action="/" method="get">
+        <form action="/idm250" method="get">
             <input type="text" name="s" id="searchField" value="<?php the_search_query();?>" placeholder=" search...">
             <button input="submit" name="submit">
                 <?php echo $icon ?>

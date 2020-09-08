@@ -1,5 +1,8 @@
 <?php get_header();?>
 
+<div class="project-wrapper">
+<div class="project-content">
+
 <main class="main-content">
   <?php while (have_posts()) : the_post(); ?>
     <div class="container">
@@ -16,5 +19,8 @@
     </div>
   <?php endwhile; ?>
 </main>
+
+</div>
+</div>
 
 <?php get_footer();?>

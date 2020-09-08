@@ -1547,6 +1547,13 @@ header {
 
 /* CONTACT TEMPLATE */
 
+.contact-wrapper form {
+  font-family: "Andale Mono"; 
+  font-style: normal; 
+  font-variant: normal; 
+  color: var(--main);
+}
+
 .contact-wrapper {
   display: grid;
   max-width: 2000px;

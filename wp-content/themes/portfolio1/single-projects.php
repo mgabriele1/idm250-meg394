@@ -4,9 +4,9 @@
 
 <div class="project-wrapper">
   <div class="project-content">
-      <?php the_title(); ?>
-      <?php the_content(); ?>
-    </div>
+    <h1> <?php the_title(); ?> </h1>
+    <?php the_content(); ?>
+  </div>
 </div>
 
   <?php endwhile; ?>

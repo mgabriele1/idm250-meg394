@@ -22,7 +22,7 @@ $the_query = new WP_Query($args); ?>
     <a href="<?php the_permalink(); ?>" class="card">
         <h2><?php the_title(); ?></h2>
         <i class="fas fa-arrow-right"></i>
-        <p> gheroughkj</p>
+        <p> </p>
         <div class="pic" style="background-image: url(<?php the_post_thumbnail_url(); ?>)"> </div>
         <button>
         </button>
